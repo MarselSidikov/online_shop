@@ -57,7 +57,7 @@ public class AppConfig {
         return amazonS3ClientBuilder.build(); // клиент для амазона/digital ocean
     }
 
-    @Value("${spring.data.source.url}")
+    @Value("${spring.datasource.url}")
     private String url;
 
     @Bean
