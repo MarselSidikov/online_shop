@@ -57,8 +57,12 @@ public class AppConfig {
         return amazonS3ClientBuilder.build(); // клиент для амазона/digital ocean
     }
 
+    @Value("${spring.data.source.url}")
+    private String url;
+
     @Bean
     public PasswordEncoder passwordEncoder() {
+        System.out.println("СМОТРИ СЮДА!!!!!!!!! " + url);
         return new BCryptPasswordEncoder();
     }
 
